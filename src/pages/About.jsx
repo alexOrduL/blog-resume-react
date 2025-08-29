@@ -2,28 +2,36 @@ import { Link } from 'react-router-dom';
 import { 
   Code, 
   BookOpen, 
-  Coffee, 
+  Music, 
   Heart,
   Briefcase,
   GraduationCap,
   Mail,
   Github,
-  Twitter,
-  Linkedin
+  Linkedin,
+  Instagram,
+  Spotify,
+  Radio
 } from 'lucide-react';
 import './About.css';
 
 const About = () => {
-  const skills = [
-    'React', 'JavaScript', 'TypeScript', 'Node.js', 'Express',
-    'MongoDB', 'PostgreSQL', 'Git', 'Docker', 'AWS'
+  const professionalSkills = [
+    'Inteligencia Artificial', 'Machine Learning', 'Python', 'React', 
+    'JavaScript', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 
+    'PostgreSQL', 'Git', 'Docker', 'AWS'
+  ];
+
+  const personalSkills = [
+    'Música', 'Producción Musical', 'Hip Hop', 'Breaking', 'Street Dance'
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: Github, url: 'https://github.com/tuusuario' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/tuusuario' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/tuusuario' },
-    { name: 'Email', icon: Mail, url: 'mailto:tu@email.com' },
+    { name: 'GitHub', icon: Github, url: 'https://github.com/alexOrduL' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/alejandro-orduno' },
+    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/alexorduno' },
+    { name: 'Spotify', icon: Spotify, url: 'https://open.spotify.com/artist/0KTegBzreW7d5zsJrw4fQX' },
+    { name: 'Email', icon: Mail, url: 'mailto:contacto@alejandroorduno.com' },
   ];
 
   return (
@@ -34,16 +42,56 @@ const About = () => {
           <div className="about-content">
             <div className="profile-section">
               <div className="profile-image">
-                <div className="profile-placeholder">
-                  <Code size={48} />
-                </div>
+                <img 
+                  src="/path-to-your-professional-image.jpg" 
+                  alt="Alejandro Orduño"
+                  className="profile-photo"
+                />
               </div>
               <div className="profile-info">
-                <h1>Acerca de Mí</h1>
+                <h1>Alejandro Orduño</h1>
                 <p className="intro-text">
-                  ¡Hola! Soy un desarrollador Full Stack apasionado por crear 
-                  experiencias web increíbles y compartir conocimiento con la comunidad.
+                  Desarrollador Full Stack especializado en Inteligencia Artificial, 
+                  con una pasión por la tecnología y el arte. Además de crear soluciones 
+                  tecnológicas innovadoras, soy músico y bailarín de hip-hop, 
+                  fusionando la creatividad técnica con la expresión artística.
                 </p>
+              </div>
+            </div>
+            
+            <div className="dual-section">
+              <div className="professional-section">
+                <h2><Code size={24} className="section-icon" /> Perfil Profesional</h2>
+                <p>
+                  Especialista en desarrollo de software con enfoque en IA y soluciones web.
+                  Mi experiencia abarca desde el desarrollo de aplicaciones empresariales
+                  hasta la implementación de sistemas de inteligencia artificial.
+                </p>
+                <div className="skills-container">
+                  <h3>Habilidades Técnicas</h3>
+                  <div className="skills-grid">
+                    {professionalSkills.map((skill) => (
+                      <span key={skill} className="skill-tag">{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="personal-section">
+                <h2><Music size={24} className="section-icon" /> Perfil Artístico</h2>
+                <p>
+                  Artista multifacético en la escena del hip-hop, combinando la producción
+                  musical con el breaking y la cultura urbana. Mi música está disponible en
+                  Spotify y participo activamente en eventos y competencias de baile.
+                </p>
+                <div className="skills-container">
+                  <h3>Habilidades Artísticas</h3>
+                  <div className="skills-grid">
+                    {personalSkills.map((skill) => (
+                      <span key={skill} className="skill-tag personal">{skill}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

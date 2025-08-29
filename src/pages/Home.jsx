@@ -14,11 +14,11 @@ const Home = () => {
         <section className="hero">
           <div className="hero-content">
             <h1 className="hero-title">
-              ¡Hola! Soy <span className="highlight">Tu Nombre</span>
+              ¡Hola! Soy <span className="highlight">Alejandro Orduño</span>
             </h1>
             <p className="hero-subtitle">
-              Desarrollador Full Stack apasionado por crear experiencias web increíbles.
-              Aquí comparto mis conocimientos, experiencias y reflexiones sobre tecnología.
+              Desarrollador Full Stack especializado en Inteligencia Artificial y experiencias web innovadoras.
+              Con experiencia en el desarrollo de soluciones tecnológicas avanzadas y una pasión por la música y la cultura hip-hop.
             </p>
             <div className="hero-actions">
               <Link to="/blog" className="btn btn-primary">

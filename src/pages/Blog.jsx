@@ -7,6 +7,7 @@ import './Blog.css';
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTag, setSelectedTag] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   // Obtener todos los tags únicos
   const allTags = useMemo(() => {
@@ -32,6 +33,13 @@ const Blog = () => {
     if (selectedTag && selectedTag !== 'Todos') {
       filtered = filtered.filter(post =>
         post.tags.includes(selectedTag)
+      );
+    }
+
+    // Filtrar por categoría
+    if (selectedCategory && selectedCategory !== 'Todos') {
+      filtered = filtered.filter(post =>
+        post.category === selectedCategory
       );
     }
 
@@ -64,23 +72,46 @@ const Blog = () => {
             />
           </div>
 
-          <div className="tag-filters">
-            <Filter size={20} className="filter-icon" />
-            <div className="tag-buttons">
-              {allTags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setSelectedTag(tag === 'Todos' ? '' : tag)}
-                  className={`tag-button ${
-                    (selectedTag === '' && tag === 'Todos') ||
-                    selectedTag === tag
-                      ? 'active'
-                      : ''
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
+          <div className="filters-container">
+            <div className="category-filters">
+              <h3>Categorías</h3>
+              <div className="category-buttons">
+                {['Todos', 'professional', 'personal'].map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category === 'Todos' ? '' : category)}
+                    className={`category-button ${
+                      (selectedCategory === '' && category === 'Todos') ||
+                      selectedCategory === category
+                        ? 'active'
+                        : ''
+                    }`}
+                  >
+                    {category === 'professional' ? 'Profesional' : 
+                     category === 'personal' ? 'Personal' : category}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="tag-filters">
+              <Filter size={20} className="filter-icon" />
+              <div className="tag-buttons">
+                {allTags.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => setSelectedTag(tag === 'Todos' ? '' : tag)}
+                    className={`tag-button ${
+                      (selectedTag === '' && tag === 'Todos') ||
+                      selectedTag === tag
+                        ? 'active'
+                        : ''
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>

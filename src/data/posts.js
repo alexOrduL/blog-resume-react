@@ -1,9 +1,10 @@
 export const blogPosts = [
   {
     id: 1,
-    title: "Bienvenidos a mi Blog Personal",
-    slug: "bienvenidos-a-mi-blog",
-    excerpt: "Este es mi primer post en este nuevo blog personal. Aquí compartiré mis pensamientos, experiencias y aprendizajes sobre desarrollo web, tecnología y vida.",
+    title: "Desarrollador & Artista: Mi Viaje en Tech y Hip Hop",
+    slug: "desarrollador-artista-viaje",
+    category: "personal",
+    excerpt: "Mi trayectoria única combinando el desarrollo de software y la inteligencia artificial con mi pasión por la música y el breaking.",
     content: `
 # ¡Hola y bienvenidos! 👋
 
