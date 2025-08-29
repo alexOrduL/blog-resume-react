@@ -1,0 +1,123 @@
+.post-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: fit-content;
+}
+
+.post-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.post-card.featured {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.post-card-content {
+  padding: 1.5rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.post-date,
+.post-read-time {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.post-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.post-card.featured .post-title {
+  font-size: 1.75rem;
+}
+
+.post-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.post-title a:hover {
+  color: var(--primary-color);
+}
+
+.post-excerpt {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  text-transform: lowercase;
+}
+
+.read-more {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.read-more:hover {
+  color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .post-card-content {
+    padding: 1.25rem;
+  }
+  
+  .post-title {
+    font-size: 1.25rem;
+  }
+  
+  .post-card.featured .post-title {
+    font-size: 1.5rem;
+  }
+  
+  .post-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
