@@ -1,6 +1,5 @@
 .about-page {
   min-height: 80vh;
-  padding: 2rem 1rem;
 }
 
 .about-hero {
@@ -43,6 +42,56 @@
   line-height: 1.6;
   max-width: 600px;
   margin: 0;
+}
+
+/* Dual Section Styles */
+.dual-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .dual-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.professional-section,
+.personal-section {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.professional-section h2,
+.personal-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.section-icon {
+  color: var(--primary-color);
+}
+
+.professional-section p,
+.personal-section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.skills-container h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 /* Main Content */
@@ -287,6 +336,162 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Music & Art Section */
+.music-art-section {
+  margin: 4rem 0;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.music-art-section h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.art-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 968px) {
+  .art-content {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+  }
+}
+
+.art-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .art-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 968px) {
+  .art-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+.art-image-container {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  aspect-ratio: 1;
+  transition: transform 0.3s ease;
+}
+
+.art-image-container:hover {
+  transform: scale(1.05);
+}
+
+.art-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.art-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay svg {
+  color: white;
+}
+
+.art-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.art-description p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.music-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.instagram-highlights {
+  background: var(--bg-primary);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.instagram-highlights h4 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.highlight-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-links:last-child {
+  margin-bottom: 0;
+}
+
+.highlight-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.highlight-links a:hover {
+  color: var(--primary-dark);
+  padding-left: 0.5rem;
+  border-bottom-color: var(--primary-color);
+}
+
+.highlight-links a:last-child {
+  border-bottom: none;
 }
 
 /* Media Grid */

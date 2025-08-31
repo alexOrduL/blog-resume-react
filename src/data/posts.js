@@ -6,38 +6,56 @@ export const blogPosts = [
     category: "personal",
     excerpt: "Mi trayectoria única combinando el desarrollo de software y la inteligencia artificial con mi pasión por la música y el breaking.",
     content: `
-# ¡Hola y bienvenidos! 👋
+# ¡Hola! Soy Alejandro Orduño 👋
 
-Este es mi primer post en este nuevo blog personal. Después de mucho tiempo pensándolo, finalmente decidí crear un espacio donde poder compartir mis pensamientos, experiencias y aprendizajes.
+Bienvenidos a mi blog personal, un espacio donde dos mundos aparentemente diferentes se encuentran: la **tecnología** y el **arte urbano**.
 
-## ¿Qué encontrarás aquí?
+## Mi Doble Identidad
 
-En este blog voy a hablar sobre:
+### 💻 El Desarrollador
+Soy un **Desarrollador Full Stack** especializado en **Inteligencia Artificial**. Mi día a día incluye:
+- Desarrollo con React, Node.js y Python
+- Implementación de soluciones de Machine Learning
+- Creación de aplicaciones web escalables
+- Optimización de algoritmos y estructuras de datos
 
-- **Desarrollo Web**: Tutoriales, tips y mejores prácticas
-- **Tecnología**: Las últimas tendencias y herramientas que uso
-- **Experiencias**: Proyectos en los que trabajo y lecciones aprendidas
-- **Reflexiones**: Pensamientos sobre la industria tech y la vida
+### 🎤 El Artista
+Pero cuando se pone el sol, me transformo en **Maxol**, un artista de hip-hop que:
+- Produce beats innovadores
+- Practica breaking y street dance
+- Participa en eventos de la cultura urbana
+- Fusiona la creatividad digital con la expresión artística
 
-## ¿Por qué un blog?
+## ¿Cómo se Conectan?
 
-Creo firmemente que compartir conocimiento es una de las mejores formas de:
-1. Ayudar a otros desarrolladores
-2. Consolidar mi propio aprendizaje
-3. Crear conexiones con la comunidad
+Podría parecer que la programación y el hip-hop no tienen nada en común, pero en realidad:
 
-Espero que este contenido te sea útil y te invite a reflexionar. ¡No dudes en contactarme si tienes preguntas o comentarios!
+1. **Creatividad estructurada**: Tanto el código como la música requieren creatividad dentro de reglas y estructuras
+2. **Iteración y mejora**: Los beats, como los algoritmos, se perfeccionan con cada versión
+3. **Comunidad**: Ambas culturas valoran la colaboración y el intercambio de conocimiento
 
-## ¿Qué viene después?
+## ¿Qué Encontrarás Aquí?
 
-En los próximos posts estaré hablando sobre React, JavaScript moderno, y cómo construir aplicaciones web escalables.
+- **Tutoriales técnicos**: Desde React hasta IA práctica
+- **Reflexiones artísticas**: Mi proceso creativo en la música
+- **Proyectos únicos**: Donde la tech se encuentra con el arte
+- **Mi trayectoria**: Cómo balance ambas pasiones
 
-¡Nos vemos en el siguiente post! 🚀
+## Mi Misión
+
+Quiero demostrar que no tienes que elegir entre ser "técnico" o "artístico". Puedes ser ambos y usar cada disciplina para enriquecer la otra.
+
+---
+
+🎧 **Escucha mi música**: [Maxol en Spotify](https://open.spotify.com/artist/0KTegBzreW7d5zsJrw4fQX)
+💻 **Ve mis proyectos**: [GitHub](https://github.com/alexOrduL)
+
+¡Prepárate para un viaje único donde los algoritmos bailan al ritmo del hip-hop! 🚀🎵
     `,
     date: "2024-01-15",
     readTime: "3 min",
     tags: ["personal", "introducción", "bienvenida"],
-    author: "Tu Nombre"
+    author: "Alejandro Orduño"
   },
   {
     id: 2,
@@ -138,7 +156,7 @@ Los React Hooks nos permiten escribir código más limpio, reutilizable y fácil
     date: "2024-01-10",
     readTime: "8 min",
     tags: ["react", "javascript", "frontend", "tutorial"],
-    author: "Tu Nombre"
+    author: "Alejandro Orduño"
   },
   {
     id: 3,
@@ -236,7 +254,7 @@ El desarrollo web en 2024 se trata de:
     date: "2024-01-05",
     readTime: "6 min",
     tags: ["tendencias", "desarrollo web", "2024", "tecnología"],
-    author: "Tu Nombre"
+    author: "Alejandro Orduño"
   }
 ];
 

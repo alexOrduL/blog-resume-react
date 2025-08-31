@@ -9,9 +9,8 @@ import {
   Mail,
   Github,
   Linkedin,
-  Instagram,
-  Spotify,
-  Radio
+  Twitter,
+  Coffee
 } from 'lucide-react';
 import './About.css';
 
@@ -29,8 +28,7 @@ const About = () => {
   const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/alexOrduL' },
     { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/alejandro-orduno' },
-    { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/alexorduno' },
-    { name: 'Spotify', icon: Spotify, url: 'https://open.spotify.com/artist/0KTegBzreW7d5zsJrw4fQX' },
+    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/alexorduno' },
     { name: 'Email', icon: Mail, url: 'mailto:contacto@alejandroorduno.com' },
   ];
 
@@ -43,7 +41,7 @@ const About = () => {
             <div className="profile-section">
               <div className="profile-image">
                 <img 
-                  src="/path-to-your-professional-image.jpg" 
+                  src="/images/alejandro-profile.webp" 
                   alt="Alejandro Orduño"
                   className="profile-photo"
                 />
@@ -188,7 +186,7 @@ const About = () => {
           <section className="skills-section">
             <h3>Tecnologías que Uso</h3>
             <div className="skills-grid">
-              {skills.map((skill) => (
+              {professionalSkills.map((skill) => (
                 <span key={skill} className="skill-tag">
                   {skill}
                 </span>
@@ -229,6 +227,84 @@ const About = () => {
                   Me enfoco en escribir código limpio, mantenible y bien 
                   documentado que pueda entender cualquier desarrollador.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Music & Art Section */}
+          <section className="music-art-section">
+            <h3>Maxol - Mi Lado Artístico</h3>
+            <div className="art-content">
+              <div className="art-images">
+                <div className="art-image-container">
+                  <img src="/images/alejandro-artistic.webp" alt="Maxol en acción" />
+                  <div className="image-overlay">
+                    <Music size={32} />
+                  </div>
+                </div>
+                <div className="art-image-container">
+                  <img src="/images/alejandro-personal.webp" alt="Breaking y Hip-Hop" />
+                  <div className="image-overlay">
+                    <Music size={32} />
+                  </div>
+                </div>
+              </div>
+              
+              <div className="art-description">
+                <p>
+                  Como <strong>Maxol</strong>, expreso mi creatividad a través de la música hip-hop y el breaking. 
+                  Mi trabajo combina producción musical innovadora con la energía del street dance, 
+                  participando activamente en la escena cultural urbana.
+                </p>
+                
+                <div className="music-links">
+                  <a 
+                    href="https://open.spotify.com/artist/0KTegBzreW7d5zsJrw4fQX" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    <Music size={20} />
+                    Escuchar en Spotify
+                  </a>
+                  <a 
+                    href="https://www.instagram.com/alexorduno" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                  >
+                    <BookOpen size={20} />
+                    Ver en Instagram
+                  </a>
+                </div>
+                
+                <div className="instagram-highlights">
+                  <h4>🎤 Destacados Musicales</h4>
+                  <div className="highlight-links">
+                    <a href="https://www.instagram.com/p/DKBIYFmMiNC/" target="_blank" rel="noopener noreferrer">
+                      Post musical reciente
+                    </a>
+                    <a href="https://www.instagram.com/p/DC7j2w4TllB/" target="_blank" rel="noopener noreferrer">
+                      Colaboración artística
+                    </a>
+                  </div>
+                  
+                  <h4>🕺 Destacados de Baile</h4>
+                  <div className="highlight-links">
+                    <a href="https://www.instagram.com/reel/DLFwYbURQiI/" target="_blank" rel="noopener noreferrer">
+                      Breaking session
+                    </a>
+                    <a href="https://www.instagram.com/reel/DIbuHs9uTZe/" target="_blank" rel="noopener noreferrer">
+                      Street dance performance
+                    </a>
+                    <a href="https://www.instagram.com/p/DHT574yv5YX/" target="_blank" rel="noopener noreferrer">
+                      Hip-hop showcase
+                    </a>
+                    <a href="https://www.instagram.com/reel/DGWZq-1OTjB/" target="_blank" rel="noopener noreferrer">
+                      Dance battle
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
