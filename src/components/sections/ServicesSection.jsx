@@ -1,60 +1,50 @@
 import React from 'react';
-import { Code, Brain, Database, Cloud, Bot, Globe, Tool, Lock } from 'lucide-react';
-import './ServicesSection.css';
+import { useTranslation } from 'react-i18next';
+import { Code, Brain, Database, Cloud, Globe } from 'lucide-react';
+import '../styles/ServicesSection.css';
 
-const services = [
-  {
-    icon: <Code size={32} />,
-    color: "blue",
-    title: "Desarrollo Full Stack",
-    description: "Creo aplicaciones web completas y escalables utilizando las últimas tecnologías y mejores prácticas.",
-    tags: ["React", "Node.js", "TypeScript", "MongoDB"]
-  },
-  {
-    icon: <Brain size={32} />,
-    color: "purple",
-    title: "Inteligencia Artificial",
-    description: "Implemento soluciones de IA y Machine Learning para optimizar procesos y crear experiencias inteligentes.",
-    tags: ["Python", "TensorFlow", "PyTorch", "Scikit-learn"]
-  },
-  {
-    icon: <Database size={32} />,
-    color: "green",
-    title: "Arquitectura de Datos",
-    description: "Diseño e implemento arquitecturas de datos eficientes y escalables para aplicaciones modernas.",
-    tags: ["SQL", "NoSQL", "Data Modeling", "ETL"]
-  },
-  {
-    icon: <Cloud size={32} />,
-    color: "orange",
-    title: "Cloud & DevOps",
-    description: "Despliego y mantengo aplicaciones en la nube con prácticas DevOps modernas.",
-    tags: ["AWS", "Docker", "CI/CD", "Kubernetes"]
-  }
-];
+const getServiceIcon = (size = 32) => ({
+  fullstack: <Code size={size} />,
+  ai: <Brain size={size} />,
+  data: <Database size={size} />,
+  cloud: <Cloud size={size} />
+});
+
+const serviceColors = {
+  fullstack: "blue",
+  ai: "purple",
+  data: "green",
+  cloud: "orange"
+};
 
 const ServicesSection = () => {
+  const { t, i18n } = useTranslation();
+
   return (
     <section id="services" className="services-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-badge">Servicios</span>
+          <span className="section-badge">{t('services.sectionBadge')}</span>
           <h2 className="section-title">
-            Soluciones <span className="highlight">Tecnológicas</span> Integrales
+            {t('services.title')}
           </h2>
           <p className="section-subtitle">
-            Ofrezco servicios profesionales de desarrollo y consultoría para impulsar tu negocio al siguiente nivel
+            {t('services.subtitle')}
           </p>
         </div>
 
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div key={index} className={`service-card ${service.color}`} style={{animationDelay: `${index * 0.1}s`}}>
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+          {['fullstack', 'ai', 'data', 'cloud'].map((serviceKey, index) => (
+            <div 
+              key={serviceKey} 
+              className={`service-card ${serviceColors[serviceKey]}`} 
+              style={{animationDelay: `${index * 0.1}s`}}
+            >
+              <div className="service-icon">{getServiceIcon()[serviceKey]}</div>
+              <h3>{t(`services.cards.${serviceKey}.title`)}</h3>
+              <p>{t(`services.cards.${serviceKey}.description`)}</p>
               <div className="service-tags">
-                {service.tags.map((tag, i) => (
+                {t(`services.cards.${serviceKey}.tags`, { returnObjects: true }).map((tag, i) => (
                   <span key={i} className="service-tag">{tag}</span>
                 ))}
               </div>

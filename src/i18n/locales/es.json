@@ -1,0 +1,115 @@
+{
+    "common": {
+        "readMore": "Leer Más",
+        "contactMe": "Contáctame",
+        "learnMore": "Conoce Más"
+    },
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "experience": "Experiencia",
+        "portfolio": "Portafolio",
+        "about": "Acerca de",
+        "blog": "Blog",
+        "contact": "Contactar",
+        "changeLanguage": "Cambiar Idioma",
+        "currentLanguage": "Idioma Actual"
+    },
+    "hero": {
+        "title": "Desarrollador Full Stack & Consultor Tecnológico",
+        "subtitle": "Con más de 5 años de experiencia en el desarrollo de soluciones digitales, me especializo en crear experiencias web excepcionales y escalables",
+        "cta": "Conoce Más Sobre Mis Servicios"
+    },
+    "services": {
+        "title": "Soluciones Tecnológicas Integrales",
+        "subtitle": "Ofrezco servicios profesionales de desarrollo y consultoría para impulsar tu negocio al siguiente nivel",
+        "sectionBadge": "Servicios",
+        "cards": {
+            "fullstack": {
+                "title": "Desarrollo Full Stack",
+                "description": "Creo aplicaciones web completas y escalables utilizando las últimas tecnologías y mejores prácticas.",
+                "tags": [
+                    "React",
+                    "Node.js",
+                    "TypeScript",
+                    "MongoDB"
+                ]
+            },
+            "ai": {
+                "title": "Inteligencia Artificial",
+                "description": "Implemento soluciones de IA y Machine Learning para optimizar procesos y crear experiencias inteligentes.",
+                "tags": [
+                    "Python",
+                    "TensorFlow",
+                    "PyTorch",
+                    "Scikit-learn"
+                ]
+            },
+            "data": {
+                "title": "Arquitectura de Datos",
+                "description": "Diseño e implemento arquitecturas de datos eficientes y escalables para aplicaciones modernas.",
+                "tags": [
+                    "SQL",
+                    "NoSQL",
+                    "Data Modeling",
+                    "ETL"
+                ]
+            },
+            "cloud": {
+                "title": "Cloud & DevOps",
+                "description": "Despliego y mantengo aplicaciones en la nube con prácticas DevOps modernas.",
+                "tags": [
+                    "AWS",
+                    "Docker",
+                    "CI/CD",
+                    "Kubernetes"
+                ]
+            }
+        }
+    },
+    "artistic": {
+        "title": "Mi Lado Artístico",
+        "subtitle": "Más allá del código, exploro diferentes formas de expresión creativa",
+        "sectionBadge": "Arte & Creatividad",
+        "cards": {
+            "photography": {
+                "title": "Fotografía",
+                "description": "Fotografía urbana y retratos",
+                "captions": {
+                    "photo1": "Ciudad al atardecer",
+                    "photo2": "Retrato en B&N"
+                }
+            },
+            "design": {
+                "title": "Diseño Digital",
+                "description": "Ilustración y diseño gráfico",
+                "captions": {
+                    "design1": "Ilustración abstracta",
+                    "design2": "Diseño minimalista"
+                }
+            },
+            "music": {
+                "title": "Música",
+                "description": "Composición y producción",
+                "captions": {
+                    "music1": "Estudio de grabación",
+                    "music2": "Composición musical"
+                }
+            }
+        },
+        "passion": {
+            "title": "La Creatividad como Motor",
+            "description": "El arte y la tecnología son dos caras de la misma moneda: la innovación. Mi pasión por ambos campos me permite aportar una perspectiva única a cada proyecto.",
+            "stats": {
+                "works": {
+                    "number": "100+",
+                    "label": "Obras Creadas"
+                },
+                "disciplines": {
+                    "number": "3",
+                    "label": "Disciplinas"
+                }
+            }
+        }
+    }
+}

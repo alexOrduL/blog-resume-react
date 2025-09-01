@@ -177,6 +177,43 @@
   animation: fadeIn 0.3s ease-out;
 }
 
+/* Language Switcher */
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 1rem;
+}
+
+.language-switch:hover {
+  background: var(--bg-tertiary);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Estilos para el botón de idioma en móvil */
+@media (max-width: 768px) {
+  .language-switch {
+    display: none;
+  }
+
+  .mobile-menu .language-switch {
+    display: flex;
+    width: 100%;
+    margin: 1rem 0;
+    justify-content: center;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links,

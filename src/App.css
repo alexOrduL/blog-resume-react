@@ -120,13 +120,7 @@ p {
   line-height: 1.6;
 }
 
-.highlight {
-  background: var(--background-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 800;
-}
+/* Use global highlight styles from index.css */
 
 /* Links */
 a {

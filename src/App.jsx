@@ -1,4 +1,3 @@
-// Professional Landing Page - One Page Design
 import './App.css';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';

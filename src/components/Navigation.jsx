@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +18,17 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Servicios', href: '#services' },
-    { name: 'Experiencia', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contacto', href: '#contact' }
+    { name: t('nav.home'), href: '#hero' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.experience'), href: '#about' },
+    { name: t('nav.portfolio'), href: '#portfolio' },
+    { name: t('nav.contact'), href: '#contact' }
   ];
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'es' ? 'en' : 'es';
+    i18n.changeLanguage(newLang);
+  };
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
@@ -58,6 +65,16 @@ const Navigation = () => {
               ))}
             </ul>
 
+            {/* Language Selector */}
+            <button 
+              onClick={toggleLanguage}
+              className="language-switch"
+              aria-label={t('nav.changeLanguage')}
+            >
+              <Globe size={20} />
+              <span>{i18n.language.toUpperCase()}</span>
+            </button>
+
             {/* CTA Button */}
             <div className="nav-cta">
               <a 
@@ -65,7 +82,7 @@ const Navigation = () => {
                 onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
                 className="btn btn-primary btn-sm"
               >
-                Contactar
+                {t('nav.contact')}
                 <ArrowRight size={16} />
               </a>
             </div>
@@ -99,13 +116,23 @@ const Navigation = () => {
             ))}
           </ul>
           
+          {/* Language Selector for Mobile */}
+          <button 
+            onClick={toggleLanguage}
+            className="language-switch mobile"
+            aria-label={t('nav.changeLanguage')}
+          >
+            <Globe size={20} />
+            <span>{i18n.language === 'es' ? 'Español' : 'English'}</span>
+          </button>
+          
           <div className="mobile-nav-cta">
             <a 
               href="#contact" 
               onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
               className="btn btn-primary w-full"
             >
-              Contactar Ahora
+              {t('nav.contact')}
               <ArrowRight size={20} />
             </a>
           </div>

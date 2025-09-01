@@ -121,7 +121,7 @@ const ServicesSection = () => {
     <section id="services" className="services-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-badge">Servicios</span>
+          <span className="section-badge">Servicios</span>  
           <h2 className="section-title">
             Soluciones <span className="highlight">Tecnológicas</span> Integrales
           </h2>

@@ -1,0 +1,115 @@
+{
+    "common": {
+        "readMore": "Read More",
+        "contactMe": "Contact Me",
+        "learnMore": "Learn More"
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "experience": "Experience",
+        "portfolio": "Portfolio",
+        "about": "About",
+        "blog": "Blog",
+        "contact": "Contact",
+        "changeLanguage": "Change Language",
+        "currentLanguage": "Current Language"
+    },
+    "hero": {
+        "title": "Full Stack Developer & Technology Consultant",
+        "subtitle": "With over 5 years of experience in digital solutions development, I specialize in creating exceptional and scalable web experiences",
+        "cta": "Learn More About My Services"
+    },
+    "services": {
+        "title": "Comprehensive Technology Solutions",
+        "subtitle": "I offer professional development and consulting services to take your business to the next level",
+        "sectionBadge": "Services",
+        "cards": {
+            "fullstack": {
+                "title": "Full Stack Development",
+                "description": "I create complete and scalable web applications using the latest technologies and best practices.",
+                "tags": [
+                    "React",
+                    "Node.js",
+                    "TypeScript",
+                    "MongoDB"
+                ]
+            },
+            "ai": {
+                "title": "Artificial Intelligence",
+                "description": "I implement AI and Machine Learning solutions to optimize processes and create intelligent experiences.",
+                "tags": [
+                    "Python",
+                    "TensorFlow",
+                    "PyTorch",
+                    "Scikit-learn"
+                ]
+            },
+            "data": {
+                "title": "Data Architecture",
+                "description": "I design and implement efficient and scalable data architectures for modern applications.",
+                "tags": [
+                    "SQL",
+                    "NoSQL",
+                    "Data Modeling",
+                    "ETL"
+                ]
+            },
+            "cloud": {
+                "title": "Cloud & DevOps",
+                "description": "I deploy and maintain cloud applications with modern DevOps practices.",
+                "tags": [
+                    "AWS",
+                    "Docker",
+                    "CI/CD",
+                    "Kubernetes"
+                ]
+            }
+        }
+    },
+    "artistic": {
+        "title": "My Artistic Side",
+        "subtitle": "Beyond code, I explore different forms of creative expression",
+        "sectionBadge": "Art & Creativity",
+        "cards": {
+            "photography": {
+                "title": "Photography",
+                "description": "Urban photography and portraits",
+                "captions": {
+                    "photo1": "City at sunset",
+                    "photo2": "B&W Portrait"
+                }
+            },
+            "design": {
+                "title": "Digital Design",
+                "description": "Illustration and graphic design",
+                "captions": {
+                    "design1": "Abstract illustration",
+                    "design2": "Minimalist design"
+                }
+            },
+            "music": {
+                "title": "Music",
+                "description": "Composition and production",
+                "captions": {
+                    "music1": "Recording studio",
+                    "music2": "Musical composition"
+                }
+            }
+        },
+        "passion": {
+            "title": "Creativity as a Drive",
+            "description": "Art and technology are two sides of the same coin: innovation. My passion for both fields allows me to bring a unique perspective to each project.",
+            "stats": {
+                "works": {
+                    "number": "100+",
+                    "label": "Works Created"
+                },
+                "disciplines": {
+                    "number": "3",
+                    "label": "Disciplines"
+                }
+            }
+        }
+    }
+}

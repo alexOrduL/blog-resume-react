@@ -2,8 +2,8 @@
   padding: 6rem 0;
   background: linear-gradient(
     to bottom,
-    var(--bg-color) 0%,
-    var(--bg-color-secondary) 100%
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
   );
 }
 
@@ -16,7 +16,7 @@
 .section-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: var(--accent-color-transparent);
+  background: rgba(37, 99, 235, 0.1);
   color: var(--primary-color);
   border-radius: 2rem;
   font-size: 0.875rem;
@@ -30,15 +30,10 @@
   line-height: 1.2;
 }
 
-.section-title .highlight {
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+/* Highlight styles moved to global CSS */
 
 .section-subtitle {
-  color: var(--text-color-secondary);
+  color: var(--text-secondary);
   font-size: 1.125rem;
   line-height: 1.6;
 }
@@ -50,7 +45,7 @@
 }
 
 .artistic-card {
-  background: var(--bg-color);
+  background: var(--bg-primary);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -78,7 +73,7 @@
   justify-content: center;
   margin: 0 auto 1.5rem;
   border-radius: 1rem;
-  background: var(--accent-color-transparent);
+  background: rgba(37, 99, 235, 0.1);
   color: var(--primary-color);
 }
 

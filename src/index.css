@@ -55,6 +55,30 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
+.section-title .highlight,
+h1 .highlight,
+h2 .highlight,
+h3 .highlight,
+.logo-text .highlight,
+.hero-title .highlight,
+.highlight {
+  display: inline-block !important;
+  background-image: linear-gradient(135deg, #0170B9 0%, #9663FF 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  font-weight: 700 !important;
+}
+
+/* Asegurarnos de que los contenedores tengan el color adecuado */
+.section-title,
+h1, h2, h3,
+.logo-text,
+.hero-title {
+  color: var(--text-primary, #1A1A1A);
+}
+
 h1 { font-size: 2.5rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }

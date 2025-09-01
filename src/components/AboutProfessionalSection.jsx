@@ -10,7 +10,7 @@ const achievements = [
   },
   {
     icon: <GraduationCap size={32} />,
-    number: "8+",
+    number: "5+",
     label: "Años de Experiencia",
     description: "En desarrollo de software profesional"
   },
@@ -39,7 +39,7 @@ const AboutProfessionalSection = () => {
             Consultor <span className="highlight">Tecnológico</span>
           </h2>
           <p className="section-subtitle">
-            Con más de 8 años de experiencia en el desarrollo de soluciones digitales,
+            Con más de 5 años de experiencia en el desarrollo de soluciones digitales,
             me especializo en crear experiencias web excepcionales y escalables
           </p>
         </div>

@@ -146,3 +146,51 @@
   color: var(--primary-color);
   background: var(--bg-tertiary);
 }
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.language-btn:hover {
+  background: var(--primary-dark);
+}
+
+.language-btn span {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .language-btn span {
+    display: inline;
+  }
+}
+
+/* Estilos para el botón de idioma en el menú móvil */
+.mobile-nav .language-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.mobile-nav .language-btn:hover {
+  background: var(--bg-secondary);
+  color: var(--primary-color);
+}
+
+.mobile-nav .language-btn span {
+  display: inline;
+}
