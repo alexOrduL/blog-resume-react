@@ -1,26 +1,30 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Blog from './pages/Blog';
-import Post from './pages/Post';
-import About from './pages/About';
-import NotFound from './pages/NotFound';
+// Professional Landing Page - One Page Design
 import './App.css';
+import HeroSection from './components/HeroSection';
+import ServicesSection from './components/ServicesSection';
+import AboutProfessionalSection from './components/AboutProfessionalSection';
+import PortfolioSection from './components/PortfolioSection';
+import ArtisticSection from './components/ArtisticSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import ContactSection from './components/ContactSection';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<Post />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/404" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <div className="app">
+      <Navigation />
+      <main>
+        <HeroSection />
+        <ServicesSection />
+        <AboutProfessionalSection />
+        <PortfolioSection />
+        <TestimonialsSection />
+        <ArtisticSection />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
   );
 }
 
