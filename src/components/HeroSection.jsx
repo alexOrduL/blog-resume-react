@@ -1,6 +1,7 @@
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import './HeroSection.css';
+import preview from '@/assets/infoBlog/preview.webp';
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -96,7 +97,7 @@ const HeroSection = () => {
 
           <div className="hero-visual">
             <img
-              src="/src/assets/infoBlog/preview.webp"
+              src={preview}
               alt={`${t('hero.name')} - ${t('hero.title')}`}
               className="profile-image fade-in"
             />

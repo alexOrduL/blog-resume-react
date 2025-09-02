@@ -2,6 +2,10 @@ import { Palette, Music, Camera, Film, PenTool, Heart, Disc3, DiscAlbum, Instagr
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './ArtisticSection.css';
+import Craneo2 from '@/assets/artistic/Craneo2.webp';
+import Rea from '@/assets/artistic/Rea.webp';
+import music1 from '@/assets/artistic/music1.webp';
+import music2 from '@/assets/artistic/music2.webp';
 
 // Función para cargar el script de Instagram
 const loadInstagramWidget = () => {
@@ -43,11 +47,11 @@ const ArtisticSection = () => {
       description: t('artistic.sections.design.description'),
       images: [
         {
-          url: "/src/assets/artistic/Craneo2.webp",
+          url: Craneo2,
           caption: t('artistic.sections.design.photos.abstract')
         },
         {
-          url: "/src/assets/artistic/Rea.webp",
+          url: Rea,
           caption: t('artistic.sections.design.photos.minimal')
         }
       ]
@@ -58,11 +62,11 @@ const ArtisticSection = () => {
       description: t('artistic.sections.music.description'),
       images: [
         {
-          url: "/src/assets/artistic/music1.webp",
+          url: music1,
           caption: t('artistic.sections.music.photos.studio')
         },
         {
-          url: "/src/assets/artistic/music2.webp",
+          url: music2,
           caption: t('artistic.sections.music.photos.composition')
         }
       ]
