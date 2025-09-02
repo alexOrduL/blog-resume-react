@@ -233,24 +233,33 @@
 
 @media (max-width: 767px) {
   .hero-section {
-    padding: 4rem 0 2rem;
+    padding: 6rem 0 2rem; /* Aumenté el padding superior de 4rem a 5rem */
+    min-height: 90vh; /* Reduje ligeramente la altura mínima */
   }
 
-  .hero-actions {
-    flex-direction: column;
+  .hero-content {
+    text-align: center;
+    gap: 2.5rem; /* Reduje el gap para mejor distribución en móvil */
   }
 
   .hero-badge {
     font-size: 0.75rem;
+    margin-bottom: 1.5rem; /* Ajusté el margen inferior */
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    margin-bottom: 2rem; /* Reduje el margen inferior */
+  }
+
+  .achievements-grid {
+    margin-bottom: 2rem; /* Reduje el margen inferior */
   }
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-  }
-
-  .hero-content {
-    text-align: center;
+    padding-top: 1.5rem; /* Ajusté el padding superior */
   }
 
   .achievement-item {
