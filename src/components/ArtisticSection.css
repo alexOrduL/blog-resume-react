@@ -7,6 +7,37 @@
   );
 }
 
+.instagram-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+}
+
+.instagram-section .section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.instagram-icon {
+  color: var(--color-primary);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.instagram-media {
+  max-width: 540px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
 .section-header {
   text-align: center;
   max-width: 800px;

@@ -1,109 +1,305 @@
 {
     "common": {
-        "readMore": "Read More",
-        "contactMe": "Contact Me",
-        "learnMore": "Learn More"
+        "readMore": "Read more",
+        "contactMe": "Contact me",
+        "learnMore": "Learn more",
+        "viewMore": "View more",
+        "download": "Download",
+        "send": "Send",
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success"
     },
     "nav": {
         "home": "Home",
         "services": "Services",
         "experience": "Experience",
         "portfolio": "Portfolio",
-        "about": "About",
+        "about": "About me",
         "blog": "Blog",
-        "contact": "Contact",
-        "changeLanguage": "Change Language",
-        "currentLanguage": "Current Language"
+        "contact": "Contact"
+    },
+    "footer": {
+        "copyright": "© 2024 All rights reserved",
+        "social": {
+            "title": "Follow me",
+            "github": "GitHub",
+            "linkedin": "LinkedIn",
+            "twitter": "Twitter"
+        },
+        "links": {
+            "title": "Quick Links",
+            "home": "Home",
+            "about": "About me",
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "blog": "Blog",
+            "contact": "Contact"
+        },
+        "newsletter": {
+            "title": "Newsletter",
+            "description": "Subscribe to receive updates and news",
+            "placeholder": "Enter your email",
+            "submit": "Subscribe",
+            "success": "Thank you for subscribing!",
+            "error": "Subscription error"
+        }
+    },
+    "language": {
+        "changeLanguage": "Change language",
+        "currentLanguage": "Current language"
     },
     "hero": {
-        "title": "Full Stack Developer & Technology Consultant",
-        "subtitle": "With over 5 years of experience in digital solutions development, I specialize in creating exceptional and scalable web experiences",
-        "cta": "Learn More About My Services"
-    },
-    "services": {
-        "title": "Comprehensive Technology Solutions",
-        "subtitle": "I offer professional development and consulting services to take your business to the next level",
-        "sectionBadge": "Services",
-        "cards": {
-            "fullstack": {
-                "title": "Full Stack Development",
-                "description": "I create complete and scalable web applications using the latest technologies and best practices.",
-                "tags": [
-                    "React",
-                    "Node.js",
-                    "TypeScript",
-                    "MongoDB"
-                ]
+        "greeting": "Hi, I’m",
+        "name": "Alejandro Orduño",
+        "title": "Full Stack Developer & AI Specialist",
+        "subtitle": "With over 5 years of experience in developing digital solutions, I specialize in creating innovative and scalable web experiences with artificial intelligence",
+        "cta": "Start a project",
+        "secondaryCta": "View portfolio",
+        "availability": "Available for new projects",
+        "achievements": {
+            "ai": "AI & Machine Learning Specialist",
+            "fullstack": "Full Stack Development React/Node.js",
+            "cloud": "AWS & Google Cloud Certified",
+            "availability": "Available for immediate projects"
+        },
+        "stats": {
+            "experience": {
+                "number": "5+",
+                "label": "Years of experience"
             },
-            "ai": {
-                "title": "Artificial Intelligence",
-                "description": "I implement AI and Machine Learning solutions to optimize processes and create intelligent experiences.",
-                "tags": [
-                    "Python",
-                    "TensorFlow",
-                    "PyTorch",
-                    "Scikit-learn"
-                ]
+            "projects": {
+                "number": "50+",
+                "label": "Completed projects"
             },
-            "data": {
-                "title": "Data Architecture",
-                "description": "I design and implement efficient and scalable data architectures for modern applications.",
-                "tags": [
-                    "SQL",
-                    "NoSQL",
-                    "Data Modeling",
-                    "ETL"
-                ]
-            },
-            "cloud": {
-                "title": "Cloud & DevOps",
-                "description": "I deploy and maintain cloud applications with modern DevOps practices.",
-                "tags": [
-                    "AWS",
-                    "Docker",
-                    "CI/CD",
-                    "Kubernetes"
-                ]
+            "clients": {
+                "number": "30+",
+                "label": "Satisfied clients"
             }
         }
     },
+    "services": {
+        "sectionBadge": "Services",
+        "title": {
+            "start": "Comprehensive",
+            "highlight": "Technology",
+            "end": "Solutions"
+        },
+        "subtitle": "Professional development and consulting to take your business to the next level",
+        "mostRequested": "Most Requested",
+        "requestQuote": "Request a Quote",
+        "fullstack": {
+            "title": "Full Stack Web Development",
+            "description": "Modern and scalable web applications with the latest technologies",
+            "price": "From $1,500 USD",
+            "benefits": {
+                "responsive": "Responsive Design",
+                "seo": "SEO Optimized",
+                "performance": "High Performance",
+                "api": "RESTful API",
+                "security": "Advanced Security"
+            }
+        },
+        "ai": {
+            "title": "Artificial Intelligence",
+            "description": "AI and Machine Learning solutions to optimize processes",
+            "price": "From $2,000 USD",
+            "benefits": {
+                "models": "Custom Models",
+                "data": "Data Processing",
+                "apis": "API Integration",
+                "maintenance": "Maintenance",
+                "docs": "Documentation"
+            }
+        },
+        "database": {
+            "title": "Data Architecture",
+            "description": "Design and implementation of efficient data architectures",
+            "price": "From $2,500 USD",
+            "benefits": {
+                "modeling": "Data Modeling",
+                "optimization": "Optimization",
+                "migration": "Migration",
+                "security": "Security",
+                "scalability": "Scalability"
+            }
+        },
+        "cloud": {
+            "title": "Cloud & DevOps",
+            "description": "Implementation and management of cloud infrastructure",
+            "price": "From $1,500 USD",
+            "benefits": {
+                "cicd": "CI/CD",
+                "monitoring": "24/7 Monitoring",
+                "automation": "Automation",
+                "backups": "Backups",
+                "scaling": "Auto Scaling"
+            }
+        },
+        "process": {
+            "title": "My Development Process",
+            "planning": {
+                "title": "Planning",
+                "description": "Detailed analysis of your needs and objectives"
+            },
+            "development": {
+                "title": "Development",
+                "description": "Agile implementation with regular reviews"
+            },
+            "testing": {
+                "title": "Testing",
+                "description": "Thorough testing and optimization"
+            },
+            "launch": {
+                "title": "Launch",
+                "description": "Secure deployment and ongoing support"
+            }
+        },
+        "guarantees": {
+            "title": "Why Choose My Services?",
+            "onTime": "On-time Delivery",
+            "secure": "Secure Code",
+            "support": "Ongoing Support"
+        },
+        "cta": {
+            "title": "Ready to Start Your Project?",
+            "description": "Let’s talk about your idea and how I can help you bring it to life. Free 30-minute consultation to assess your project.",
+            "button": "Free Consultation",
+            "response": "Response in less than 24 hours"
+        }
+    },
+    "about": {
+        "sectionBadge": "About Me",
+        "title": {
+            "first": "Developer",
+            "highlight1": "Full Stack",
+            "and": " & ",
+            "second": "Consultant",
+            "highlight2": "Technological"
+        },
+        "subtitle": "Transforming ideas into innovative technology solutions",
+        "intro": "My passion for technology and software development has led me to work on a wide range of projects, from startups to large companies. I specialize in:",
+        "expertise": {
+            "fullstack": "Full Stack Web Development with React and Node.js",
+            "architecture": "Software Architecture and Distributed Systems",
+            "cloud": "Implementation of Cloud and DevOps solutions",
+            "consulting": "Digital Transformation Consulting"
+        },
+        "description": "My approach focuses on creating robust and scalable solutions that not only solve technical problems but also deliver real value to my clients’ businesses.",
+        "achievements": {
+            "projects": {
+                "number": "50+",
+                "label": "Projects",
+                "description": "Experience in web development and applications"
+            },
+            "experience": {
+                "number": "5+",
+                "label": "Years of Experience",
+                "description": "In professional software development"
+            },
+            "certifications": {
+                "number": "15+",
+                "label": "Certifications",
+                "description": "In modern technologies and methodologies"
+            },
+            "clients": {
+                "number": "30+",
+                "label": "Satisfied Clients",
+                "description": "Companies and startups from various sectors"
+            }
+        }
+    },
+    "portfolio": {
+        "sectionBadge": "Portfolio",
+        "title": "Featured Projects",
+        "subtitle": "A selection of my most recent and relevant work",
+        "projects": {
+            "ecommerce": {
+                "title": "E-commerce Platform",
+                "description": "Modern e-commerce platform with payment processing and inventory management."
+            },
+            "aiImage": {
+                "title": "AI Image Generator",
+                "description": "Web application that uses AI to generate artistic images from text descriptions."
+            },
+            "taskManager": {
+                "title": "Task Management System",
+                "description": "Business task management system with advanced collaboration features."
+            },
+            "analytics": {
+                "title": "Real-time Analytics Dashboard",
+                "description": "Real-time analytics dashboard for monitoring business metrics."
+            },
+            "social": {
+                "title": "Social Media Platform",
+                "description": "Social network with modern features such as real-time chat and multimedia sharing."
+            },
+            "fitness": {
+                "title": "Fitness Tracking App",
+                "description": "Mobile app for exercise and nutrition tracking with AI integration."
+            }
+        },
+        "viewProject": "View Project",
+        "viewCode": "View Code",
+        "featured": "Featured"
+    },
+    "testimonials": {
+        "sectionBadge": "Testimonials",
+        "title": "What my",
+        "highlight": "clients",
+        "subtitle": "Testimonials from satisfied clients who trusted my services",
+        "items": [
+            {
+                "name": "John Smith",
+                "role": "CEO, Tech Solutions",
+                "text": "Outstanding work on our AI implementation project. Exceeded expectations.",
+                "image": "/testimonials/john.jpg"
+            },
+            {
+                "name": "Sarah Johnson",
+                "role": "Product Manager, E-commerce Co",
+                "text": "Great communication and technical expertise. I would definitely work with him again.",
+                "image": "/testimonials/sarah.jpg"
+            }
+        ]
+    },
     "artistic": {
+        "sectionBadge": "Art & Creativity",
         "title": "My Artistic Side",
         "subtitle": "Beyond code, I explore different forms of creative expression",
-        "sectionBadge": "Art & Creativity",
-        "cards": {
-            "photography": {
-                "title": "Photography",
+        "sections": {
+            "hiphop": {
+                "title": "Hip Hop Culture",
                 "description": "Urban photography and portraits",
-                "captions": {
-                    "photo1": "City at sunset",
-                    "photo2": "B&W Portrait"
+                "photos": {
+                    "sunset": "City at sunset",
+                    "portrait": "B&W Portrait"
                 }
             },
             "design": {
                 "title": "Digital Design",
                 "description": "Illustration and graphic design",
-                "captions": {
-                    "design1": "Abstract illustration",
-                    "design2": "Minimalist design"
+                "photos": {
+                    "abstract": "Abstract Illustration",
+                    "minimal": "Minimalist Design"
                 }
             },
             "music": {
                 "title": "Music",
                 "description": "Composition and production",
-                "captions": {
-                    "music1": "Recording studio",
-                    "music2": "Musical composition"
+                "photos": {
+                    "studio": "Recording Studio",
+                    "composition": "Music Composition"
                 }
             }
         },
         "passion": {
-            "title": "Creativity as a Drive",
-            "description": "Art and technology are two sides of the same coin: innovation. My passion for both fields allows me to bring a unique perspective to each project.",
+            "title": "Creativity as a Driver",
+            "description": "Art and technology are two sides of the same coin: innovation. My passion for both fields allows me to bring a unique perspective to every project.",
             "stats": {
                 "works": {
                     "number": "100+",
-                    "label": "Works Created"
+                    "label": "Created Works"
                 },
                 "disciplines": {
                     "number": "3",
@@ -111,5 +307,46 @@
                 }
             }
         }
+    },
+    "contact": {
+        "sectionBadge": "Contact",
+        "title": "Ready to",
+        "highlight": "Start",
+        "title-end": "?",
+        "subtitle": "Schedule a free consultation to discuss your project",
+        "form": {
+            "name": {
+                "label": "Name",
+                "placeholder": "Enter your name"
+            },
+            "email": {
+                "label": "Email",
+                "placeholder": "Enter your email"
+            },
+            "subject": {
+                "label": "Subject",
+                "placeholder": "What is it about?"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Tell me about your project"
+            },
+            "submit": "Send message",
+            "success": "Message sent successfully!",
+            "error": "There was an error sending your message"
+        },
+        "contactInfo": {
+            "title": "Contact Information",
+            "email": "Email:",
+            "phone": "Phone:",
+            "location": "Location:",
+            "availability": "Available for freelance opportunities"
+        }
+    },
+    "notFound": {
+        "title": "Page not found",
+        "subtitle": "The page you are looking for doesn’t exist or has been moved.",
+        "message": "Let’s get back on track",
+        "button": "Go back home"
     }
 }

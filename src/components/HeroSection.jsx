@@ -1,7 +1,10 @@
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './HeroSection.css';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   const scrollToSection = (sectionId) => {
     const element = document.querySelector(sectionId);
     if (element) {
@@ -9,18 +12,26 @@ const HeroSection = () => {
     }
   };
 
-  const stats = [
-    { number: '5+', label: 'Años Experiencia' },
-    { number: '50+', label: 'Proyectos Completados' },
-    { number: '100%', label: 'Satisfacción Cliente' },
-    { number: '24/7', label: 'Soporte Técnico' }
+  const achievements = [
+    t('hero.achievements.ai'),
+    t('hero.achievements.fullstack'),
+    t('hero.achievements.cloud'),
+    t('hero.achievements.availability')
   ];
 
-  const achievements = [
-    'Especialista en IA y Machine Learning',
-    'Desarrollo Full Stack React/Node.js',
-    'Certificado AWS & Google Cloud',
-    'Disponible para proyectos inmediatos'
+  const stats = [
+    { 
+      number: t('hero.stats.experience.number'),
+      label: t('hero.stats.experience.label')
+    },
+    { 
+      number: t('hero.stats.projects.number'),
+      label: t('hero.stats.projects.label')
+    },
+    { 
+      number: t('hero.stats.clients.number'),
+      label: t('hero.stats.clients.label')
+    }
   ];
 
   return (
@@ -33,21 +44,18 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            {/* Badge de disponibilidad */}
             <div className="hero-badge fade-in">
               <div className="status-indicator"></div>
-              <span>Disponible para nuevos proyectos</span>
+              <span>{t('hero.availability')}</span>
             </div>
 
-            {/* Headline principal */}
             <h1 className="hero-title slide-up">
-              Desarrollador Full Stack &<br />
-              <span className="highlight">Especialista en IA</span>
+              {t('hero.greeting')}<br />
+              <span className="highlight">{t('hero.name')}</span>
             </h1>
 
             <p className="hero-description slide-up">
-              Creo soluciones tecnológicas innovadoras que combinan desarrollo web moderno 
-              con inteligencia artificial para impulsar el éxito de tu negocio.
+              {t('hero.subtitle')}
             </p>
 
             <div className="hero-actions">
@@ -55,14 +63,14 @@ const HeroSection = () => {
                 onClick={() => scrollToSection('#contact')}
                 className="btn btn-primary"
               >
-                Iniciar Proyecto
+                {t('hero.cta')}
                 <ArrowRight size={20} />
               </button>
               <button
                 onClick={() => scrollToSection('#portfolio')}
                 className="btn btn-secondary"
               >
-                Ver Portafolio
+                {t('hero.secondaryCta')}
                 <Play size={20} />
               </button>
             </div>
@@ -89,7 +97,7 @@ const HeroSection = () => {
           <div className="hero-visual">
             <img
               src="/src/assets/infoBlog/preview.webp"
-              alt="Alejandro Orduño - Desarrollador Full Stack & Especialista en IA"
+              alt={`${t('hero.name')} - ${t('hero.title')}`}
               className="profile-image fade-in"
             />
           </div>

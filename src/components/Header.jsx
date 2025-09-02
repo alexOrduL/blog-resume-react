@@ -15,10 +15,7 @@ const Header = () => {
     { name: t('nav.about'), path: '/about' },
   ];
 
-  const changeLanguage = () => {
-    const newLang = i18n.language === 'en' ? 'es' : 'en';
-    i18n.changeLanguage(newLang);
-  };
+  // Language handling moved to Navigation component
 
   const isActive = (path) => {
     return location.pathname === path;
@@ -45,14 +42,6 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <button
-              className="language-btn"
-              onClick={changeLanguage}
-              aria-label={t('nav.changeLanguage')}
-            >
-              <Globe size={20} />
-              <span>{i18n.language.toUpperCase()}</span>
-            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -77,13 +66,6 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
-          <button
-            className="mobile-nav-link language-btn"
-            onClick={changeLanguage}
-          >
-            <Globe size={20} />
-            <span>{t('nav.changeLanguage')} ({i18n.language.toUpperCase()})</span>
-          </button>
         </nav>
       </div>
     </header>

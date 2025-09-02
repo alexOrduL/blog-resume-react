@@ -1,70 +1,69 @@
 import { Github, ExternalLink, Search } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './PortfolioSection.css';
 
-const projects = [
-  {
-    title: "E-commerce Platform",
-    description: "Plataforma de comercio electrónico moderna con procesamiento de pagos y gestión de inventario.",
-    image: "/images/portfolio/ecommerce.webp",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubUrl: "https://github.com/yourusername/ecommerce-platform",
-    liveUrl: "https://ecommerce-demo.com",
-    featured: true
-  },
-  {
-    title: "AI Image Generator",
-    description: "Aplicación web que utiliza IA para generar imágenes artísticas a partir de descripciones textuales.",
-    image: "/images/portfolio/ai-image.webp",
-    tags: ["Python", "TensorFlow", "React", "FastAPI"],
-    githubUrl: "https://github.com/yourusername/ai-image-generator",
-    liveUrl: "https://ai-image-gen.demo.com"
-  },
-  {
-    title: "Task Management System",
-    description: "Sistema de gestión de tareas empresariales con características avanzadas de colaboración.",
-    image: "/images/portfolio/task-manager.webp",
-    tags: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],
-    githubUrl: "https://github.com/yourusername/task-management",
-    liveUrl: "https://task-manager-demo.com"
-  },
-  {
-    title: "Real-time Analytics Dashboard",
-    description: "Dashboard de análisis en tiempo real para monitoreo de métricas empresariales.",
-    image: "/images/portfolio/analytics.webp",
-    tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
-    githubUrl: "https://github.com/yourusername/analytics-dashboard",
-    liveUrl: "https://analytics-demo.com"
-  },
-  {
-    title: "Social Media Platform",
-    description: "Red social con características modernas como chat en tiempo real y compartir multimedia.",
-    image: "/images/portfolio/social-media.webp",
-    tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
-    githubUrl: "https://github.com/yourusername/social-platform",
-    liveUrl: "https://social-demo.com"
-  },
-  {
-    title: "Fitness Tracking App",
-    description: "Aplicación móvil para seguimiento de ejercicios y nutrición con integración de IA.",
-    image: "/images/portfolio/fitness-app.webp",
-    tags: ["Flutter", "TensorFlow Lite", "Firebase", "Node.js"],
-    githubUrl: "https://github.com/yourusername/fitness-tracker",
-    liveUrl: "https://fitness-demo.com"
-  }
-];
-
 const PortfolioSection = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      title: t('portfolio.projects.ecommerce.title'),
+      description: t('portfolio.projects.ecommerce.description'),
+      image: "/images/portfolio/ecommerce.webp",
+      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      githubUrl: "https://github.com/yourusername/ecommerce-platform",
+      liveUrl: "https://ecommerce-demo.com",
+      featured: true
+    },
+    {
+      title: t('portfolio.projects.aiImage.title'),
+      description: t('portfolio.projects.aiImage.description'),
+      image: "/images/portfolio/ai-image.webp",
+      tags: ["Python", "TensorFlow", "React", "FastAPI"],
+      githubUrl: "https://github.com/yourusername/ai-image-generator",
+      liveUrl: "https://ai-image-gen.demo.com"
+    },
+    {
+      title: t('portfolio.projects.taskManager.title'),
+      description: t('portfolio.projects.taskManager.description'),
+      image: "/images/portfolio/task-manager.webp",
+      tags: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],
+      githubUrl: "https://github.com/yourusername/task-management",
+      liveUrl: "https://task-manager-demo.com"
+    },
+    {
+      title: t('portfolio.projects.analytics.title'),
+      description: t('portfolio.projects.analytics.description'),
+      image: "/images/portfolio/analytics.webp",
+      tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
+      githubUrl: "https://github.com/yourusername/analytics-dashboard",
+      liveUrl: "https://analytics-demo.com"
+    },
+    {
+      title: t('portfolio.projects.social.title'),
+      description: t('portfolio.projects.social.description'),
+      image: "/images/portfolio/social-media.webp",
+      tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
+      githubUrl: "https://github.com/yourusername/social-platform",
+      liveUrl: "https://social-demo.com"
+    },
+    {
+      title: t('portfolio.projects.fitness.title'),
+      description: t('portfolio.projects.fitness.description'),
+      image: "/images/portfolio/fitness-app.webp",
+      tags: ["Flutter", "TensorFlow Lite", "Firebase", "Node.js"],
+      githubUrl: "https://github.com/yourusername/fitness-app",
+      liveUrl: "https://fitness-demo.com"
+    }
+  ];
+
   return (
     <section id="portfolio" className="portfolio-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-badge">Portfolio</span>
-          <h2 className="section-title">
-            Proyectos <span className="highlight">Destacados</span>
-          </h2>
-          <p className="section-subtitle">
-            Una selección de mis trabajos más recientes en desarrollo web y aplicaciones
-          </p>
+          <span className="section-badge">{t('portfolio.sectionBadge')}</span>
+          <h2 className="section-title">{t('portfolio.title')}</h2>
+          <p className="section-subtitle">{t('portfolio.subtitle')}</p>
         </div>
 
         <div className="portfolio-grid">
@@ -72,21 +71,17 @@ const PortfolioSection = () => {
             <div 
               key={index} 
               className={`portfolio-card ${project.featured ? 'featured' : ''}`}
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
+              {project.featured && (
+                <div className="featured-badge">
+                  <span>{t('portfolio.featured')}</span>
+                </div>
+              )}
+
               <div className="portfolio-image">
-                <img src={project.image} alt={project.title} />
+                <img src={project.image} alt={project.title} loading="lazy" />
                 <div className="portfolio-overlay">
-                  <div className="portfolio-actions">
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="portfolio-link"
-                    >
-                      <Github size={20} />
-                      <span>Código</span>
-                    </a>
+                  <div className="portfolio-links">
                     <a 
                       href={project.liveUrl} 
                       target="_blank" 
@@ -94,12 +89,17 @@ const PortfolioSection = () => {
                       className="portfolio-link"
                     >
                       <ExternalLink size={20} />
-                      <span>Demo</span>
+                      <span>{t('portfolio.viewProject')}</span>
                     </a>
-                    <button className="portfolio-link">
-                      <Search size={20} />
-                      <span>Detalles</span>
-                    </button>
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="portfolio-link"
+                    >
+                      <Github size={20} />
+                      <span>{t('portfolio.viewCode')}</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -109,27 +109,12 @@ const PortfolioSection = () => {
                 <p className="portfolio-description">{project.description}</p>
                 <div className="portfolio-tags">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="portfolio-tag">
-                      {tag}
-                    </span>
+                    <span key={tagIndex} className="portfolio-tag">{tag}</span>
                   ))}
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="portfolio-cta">
-          <p>¿Te interesa ver más de mi trabajo?</p>
-          <a 
-            href="https://github.com/yourusername" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-          >
-            Ver más en GitHub
-            <Github size={20} />
-          </a>
         </div>
       </div>
     </section>

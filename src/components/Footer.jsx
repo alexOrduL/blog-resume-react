@@ -6,9 +6,9 @@ const Footer = () => {
 
   const socialLinks = [
     { name: 'GitHub', icon: Github, url: 'https://github.com/alexOrduL' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/alejandro-orduno' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/alexorduno' },
-    { name: 'Email', icon: Mail, url: 'mailto:contacto@alejandroorduno.com' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/in/aorduno95' },
+    // { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/alexorduno' },
+    { name: 'Email', icon: Mail, url: 'mailto:aordunol95@gmail.com' },
   ];
 
   return (
@@ -25,14 +25,14 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="footer-section">
+          {/* <div className="footer-section">
             <h4>Enlaces Rápidos</h4>
             <nav className="footer-nav">
               <a href="/">Inicio</a>
               <a href="/blog">Blog</a>
               <a href="/about">Acerca de</a>
             </nav>
-          </div>
+          </div> */}
 
           {/* Social Links */}
           <div className="footer-section">

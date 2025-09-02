@@ -18,8 +18,12 @@ i18n
       }
     },
     fallbackLng: 'es',
+    supportedLngs: ['es', 'en'],
     debug: process.env.NODE_ENV === 'development',
-
+    detection: {
+      order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+      caches: ['localStorage', 'cookie'],
+    },
     interpolation: {
       escapeValue: false,
     },

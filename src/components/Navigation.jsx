@@ -25,9 +25,16 @@ const Navigation = () => {
     { name: t('nav.contact'), href: '#contact' }
   ];
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === 'es' ? 'en' : 'es';
-    i18n.changeLanguage(newLang);
+  const toggleLanguage = async () => {
+    const currentLang = i18n.language;
+    const newLang = currentLang === 'es' ? 'en' : 'es';
+    try {
+      await i18n.changeLanguage(newLang);
+      document.documentElement.lang = newLang;
+      localStorage.setItem('i18nextLng', newLang);
+    } catch (error) {
+      console.error('Error changing language:', error);
+    }
   };
 
   const scrollToSection = (href) => {
