@@ -1,7 +1,9 @@
 import { Heart, Mail, Github, Twitter, Linkedin } from 'lucide-react';
 import './Footer.css';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -17,10 +19,9 @@ const Footer = () => {
         <div className="footer-content">
           {/* About Section */}
           <div className="footer-section">
-            <h3>Mi Blog Personal</h3>
+            {/* <h3>Mi Blog Personal</h3> */}
             <p>
-              Compartiendo conocimiento sobre desarrollo web, tecnología y reflexiones
-              sobre la industria tech. ¡Conecta conmigo!
+              {t('footer.description')}
             </p>
           </div>
 
@@ -36,7 +37,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="footer-section">
-            <h4>Sígueme</h4>
+            <h4>{t('footer.follow')}</h4>
             <div className="social-links">
               {socialLinks.map((link) => (
                 <a
@@ -57,8 +58,9 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="footer-bottom">
           <p className="copyright">
-            © {currentYear} Mi Blog. Hecho con{' '}
-            <Heart size={16} className="heart" /> y React.
+            © {currentYear} {t('footer.madeWith')}{' '}
+            <Heart size={16} className="heart" /> {t('footer.and') + ' '}
+            {t('footer.by')}
           </p>
         </div>
       </div>

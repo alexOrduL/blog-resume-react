@@ -1,81 +1,61 @@
 import { Star, Quote } from 'lucide-react';
 import './TestimonialsSection.css';
-
-const testimonials = [
-  {
-    name: "Carlos Rodríguez",
-    position: "CEO, TechStart",
-    company: "TechStart Solutions",
-    image: "/images/testimonials/testimonial1.webp",
-    rating: 5,
-    text: "Alejandro demostró un nivel excepcional de profesionalismo y expertise técnico. Entregó nuestro proyecto antes de lo previsto y con una calidad sobresaliente."
-  },
-  {
-    name: "María González",
-    position: "CTO, DataCore",
-    company: "DataCore Analytics",
-    image: "/images/testimonials/testimonial2.webp",
-    rating: 5,
-    text: "Su capacidad para entender nuestras necesidades y traducirlas en soluciones técnicas efectivas fue impresionante. Definitivamente volveremos a trabajar juntos."
-  },
-  {
-    name: "Juan Pérez",
-    position: "Founder",
-    company: "InnovaTech",
-    image: "/images/testimonials/testimonial3.webp",
-    rating: 5,
-    text: "La atención al detalle y la calidad del código entregado superaron nuestras expectativas. Un profesional altamente recomendable."
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 const TestimonialsSection = () => {
+  const { t } = useTranslation();
+
+  // Ahora obtenemos el array desde "testimonials.items"
+  const testimonials = t('testimonials.items', { returnObjects: true });
+
   return (
     <section id="testimonials" className="testimonials-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-badge">Testimonios</span>
+          <span className="section-badge">{t('testimonials.sectionBadge')}</span>
           <h2 className="section-title">
-            Lo que Dicen mis <span className="highlight">Clientes</span>
+            {t('testimonials.title')}{" "}
+            <span className="highlight">{t('testimonials.highlight')}</span>{" "}
+            {t('testimonials.title-end')}
           </h2>
-          <p className="section-subtitle">
-            Opiniones de clientes satisfechos que han confiado en mis servicios
-          </p>
+          <p className="section-subtitle">{t('testimonials.subtitle')}</p>
         </div>
 
         <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="testimonial-card"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Quote className="quote-icon" size={48} />
-              
+
               <div className="testimonial-content">
-                <p className="testimonial-text">{testimonial.text}</p>
-                
-                <div className="testimonial-rating">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      size={16} 
-                      className="star-icon" 
-                      fill="currentColor" 
-                    />
-                  ))}
-                </div>
+                <p className="testimonial-text">{testimonial.quote}</p>
+
+                {testimonial.rating && (
+                  <div className="testimonial-rating">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        size={16}
+                        className="star-icon"
+                        fill="currentColor"
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="testimonial-author">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name} 
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
                   className="author-image"
                 />
                 <div className="author-info">
                   <h4 className="author-name">{testimonial.name}</h4>
-                  <p className="author-position">{testimonial.position}</p>
-                  <p className="author-company">{testimonial.company}</p>
+                  <p className="author-role">{testimonial.role}</p>
                 </div>
               </div>
             </div>
@@ -84,16 +64,28 @@ const TestimonialsSection = () => {
 
         <div className="testimonials-summary">
           <div className="summary-stat">
-            <span className="stat-number">100%</span>
-            <span className="stat-label">Satisfacción</span>
+            <span className="stat-number">
+              {t('testimonials.stats.satisfaction.value')}
+            </span>
+            <span className="stat-label">
+              {t('testimonials.stats.satisfaction.label')}
+            </span>
           </div>
           <div className="summary-stat">
-            <span className="stat-number">30+</span>
-            <span className="stat-label">Clientes</span>
+            <span className="stat-number">
+              {t('testimonials.stats.clients.value')}
+            </span>
+            <span className="stat-label">
+              {t('testimonials.stats.clients.label')}
+            </span>
           </div>
           <div className="summary-stat">
-            <span className="stat-number">50+</span>
-            <span className="stat-label">Proyectos</span>
+            <span className="stat-number">
+              {t('testimonials.stats.projects.value')}
+            </span>
+            <span className="stat-label">
+              {t('testimonials.stats.projects.label')}
+            </span>
           </div>
         </div>
       </div>

@@ -11,6 +11,12 @@ const loadInstagramWidget = () => {
   script.id = 'instagram-embed-script';
   script.src = 'https://www.instagram.com/embed.js';
   script.async = true;
+  script.onload = () => {
+    // Procesar embeds cuando el script se carga
+    if (window.instgrm && window.instgrm.Embeds) {
+      window.instgrm.Embeds.process();
+    }
+  };
   document.body.appendChild(script);
 };
 
@@ -19,6 +25,15 @@ const ArtisticSection = () => {
 
   useEffect(() => {
     loadInstagramWidget();
+    
+    // Recargar embeds después de que el componente se monte
+    const timer = setTimeout(() => {
+      if (window.instgrm && window.instgrm.Embeds) {
+        window.instgrm.Embeds.process();
+      }
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const artworks = [
@@ -51,16 +66,15 @@ const ArtisticSection = () => {
           caption: t('artistic.sections.music.photos.composition')
         }
       ]
-    },
-    {
-      title: "Instagram",
-      icon: <Instagram size={32} />,
-      description: "Aquí comparto mi proceso creativo y más contenido",
-      instagramPosts: [
-        "https://www.instagram.com/p/DKBIYFmMiNC/?img_index=1",
-        "https://www.instagram.com/p/DLFwYbURQiI/"
-      ]
     }
+  ];
+
+  // Tus posts reales de Instagram
+  const instagramPosts = [
+    "https://www.instagram.com/p/DKBIYFmMiNC/",
+    "https://www.instagram.com/p/DLFwYbURQiI/",
+    "https://www.instagram.com/p/DC7j2w4TllB/"
+    // Agrega más posts aquí si quieres
   ];
 
   return (
@@ -72,7 +86,8 @@ const ArtisticSection = () => {
           <p className="section-subtitle">{t('artistic.subtitle')}</p>
         </div>
 
-        <div className="artistic-grid">
+        {/* Grid para artworks - lado a lado y responsive */}
+        <div className="artistic-grid" style={{display:"flex"}}>
           {artworks.map((art, index) => (
             <div 
               key={index} 
@@ -88,34 +103,98 @@ const ArtisticSection = () => {
               </div>
 
               <div className="artistic-gallery">
-                {art.instagramPosts ? (
-                  <div className="instagram-grid">
-                    {art.instagramPosts.map((postUrl, postIndex) => (
-                      <blockquote
-                        key={postIndex}
-                        className="instagram-media"
-                        data-instgrm-permalink={postUrl}
-                        data-instgrm-version="14"
-                      ></blockquote>
-                    ))}
-                  </div>
-                ) : (
-                  art.images.map((image, imageIndex) => (
-                    <div key={imageIndex} className="gallery-item">
-                      <img 
-                        src={image.url} 
-                        alt={image.caption}
-                        loading="lazy"
-                      />
-                      <div className="gallery-overlay">
-                        <p className="gallery-caption">{image.caption}</p>
-                      </div>
+                {art.images.map((image, imageIndex) => (
+                  <div key={imageIndex} className="gallery-item">
+                    <img 
+                      src={image.url} 
+                      alt={image.caption}
+                      loading="lazy"
+                    />
+                    <div className="gallery-overlay">
+                      <p className="gallery-caption">{image.caption}</p>
                     </div>
-                  ))
-                )}
+                  </div>
+                ))}
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Sección separada para Instagram */}
+        <div className="instagram-section">
+          <div className="artistic-header instagram-header">
+            <div className="artistic-icon">
+              <Instagram size={32} />
+            </div>
+            <h3 className="artistic-title">Instagram</h3>
+            <p className="artistic-description">{t('artistic.instagram.description')}</p>
+          </div>
+
+          <div 
+            className="instagram-grid"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '2rem',
+              justifyContent: 'center',
+              alignItems: 'flex-start'
+            }}
+          >
+            {instagramPosts.map((postUrl, index) => (
+              <div 
+                key={index} 
+                className="instagram-post-wrapper"
+                style={{
+                  width: '350px',
+                  height: '450px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  overflow: 'hidden',
+                  borderRadius: '12px',
+                  background: '#fff',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)'
+                }}
+              >
+                <blockquote
+                  className="instagram-media"
+                  data-instgrm-captioned
+                  data-instgrm-permalink={postUrl}
+                  data-instgrm-version="14"
+                  style={{
+                    background: '#FFF',
+                    border: '0',
+                    borderRadius: '12px',
+                    boxShadow: 'none',
+                    margin: '0',
+                    padding: '0',
+                    width: '100%',
+                    height: '100%',
+                    maxWidth: 'none',
+                    minWidth: 'auto'
+                  }}
+                >
+                  <div style={{ padding: '16px' }}>
+                    <a 
+                      href={postUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      style={{
+                        background: '#FFFFFF',
+                        lineHeight: '0',
+                        padding: '0 0',
+                        textAlign: 'center',
+                        textDecoration: 'none',
+                        width: '100%',
+                        color: '#c9c8cd'
+                      }}
+                    >
+                      Ver este post en Instagram
+                    </a>
+                  </div>
+                </blockquote>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="passion-section">

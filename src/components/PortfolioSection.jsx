@@ -10,26 +10,26 @@ const PortfolioSection = () => {
       title: t('portfolio.projects.ecommerce.title'),
       description: t('portfolio.projects.ecommerce.description'),
       image: "/images/portfolio/ecommerce.webp",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
-      liveUrl: "https://ecommerce-demo.com",
+      tags: ["React", ".Net", "MariaDB", "PayPal", "MercadoPago"],
+      githubUrl: false,
+      liveUrl: "https://avanceytec.com.mx/",
       featured: true
     },
-    {
-      title: t('portfolio.projects.aiImage.title'),
-      description: t('portfolio.projects.aiImage.description'),
-      image: "/images/portfolio/ai-image.webp",
-      tags: ["Python", "TensorFlow", "React", "FastAPI"],
-      githubUrl: "https://github.com/yourusername/ai-image-generator",
-      liveUrl: "https://ai-image-gen.demo.com"
-    },
+    // {
+    //   title: t('portfolio.projects.aiImage.title'),
+    //   description: t('portfolio.projects.aiImage.description'),
+    //   image: "/images/portfolio/ai-image.webp",
+    //   tags: ["Python", "TensorFlow", "React", "FastAPI"],
+    //   githubUrl: "https://github.com/yourusername/ai-image-generator",
+    //   liveUrl: "https://ai-image-gen.demo.com"
+    // },
     {
       title: t('portfolio.projects.taskManager.title'),
       description: t('portfolio.projects.taskManager.description'),
       image: "/images/portfolio/task-manager.webp",
       tags: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],
-      githubUrl: "https://github.com/yourusername/task-management",
-      liveUrl: "https://task-manager-demo.com"
+      githubUrl: false,
+      liveUrl: "https://www.tallylegal.io/"
     },
     {
       title: t('portfolio.projects.analytics.title'),
@@ -91,15 +91,17 @@ const PortfolioSection = () => {
                       <ExternalLink size={20} />
                       <span>{t('portfolio.viewProject')}</span>
                     </a>
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="portfolio-link"
-                    >
-                      <Github size={20} />
-                      <span>{t('portfolio.viewCode')}</span>
-                    </a>
+                    {project.githubUrl && (
+                        <a 
+                        href={project.githubUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="portfolio-link"
+                        >
+                        <Github size={20} />
+                        <span>{t('portfolio.viewCode')}</span>
+                        </a>
+                    )}
                   </div>
                 </div>
               </div>

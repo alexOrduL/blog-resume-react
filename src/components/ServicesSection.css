@@ -43,12 +43,15 @@
   line-height: 1.6;
 }
 
+/* Services Grid */
 .services-grid {
   display: grid;
   gap: 2rem;
   margin-bottom: 4rem;
+  align-items: stretch;
 }
 
+/* Service Cards */
 .service-card {
   position: relative;
   background: var(--bg-color);
@@ -59,6 +62,9 @@
   transition: all 0.3s ease;
   animation: fadeInUp 0.5s ease forwards;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .service-card:hover {
@@ -66,19 +72,25 @@
   box-shadow: var(--shadow-lg);
 }
 
+.service-card.popular {
+  border-color: var(--primary-color);
+}
+
 .popular-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 0.75rem;
-  background: var(--accent-color);
+  background: var(--primary-color);
   color: white;
   border-radius: 2rem;
   font-size: 0.75rem;
   font-weight: 500;
+  margin-bottom: 1rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-header {
@@ -97,6 +109,7 @@
   border-radius: 12px;
   background: var(--accent-color-transparent);
   color: var(--primary-color);
+  flex-shrink: 0;
 }
 
 .service-price {
@@ -106,33 +119,43 @@
 }
 
 .service-title {
-  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
   margin-bottom: 1rem;
   color: var(--text-color);
+  display: flex;
+  align-items: flex-start;
 }
 
 .service-description {
   color: var(--text-color-secondary);
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .service-benefits {
   list-style: none;
   padding: 0;
   margin: 0 0 2rem;
+  flex: 1;
 }
 
 .service-benefit {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
   color: var(--text-color);
+  line-height: 1.4;
 }
 
 .benefit-check {
   color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .service-cta {
@@ -140,6 +163,94 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.service-cta.primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.service-cta.primary:hover {
+  background: var(--primary-color-dark);
+}
+
+.service-cta.secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.service-cta.secondary:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Language-specific adjustments */
+
+/* English (default) */
+.services-grid {
+  grid-template-columns: 1fr;
+}
+
+.service-card {
+  min-height: 480px;
+}
+
+.service-title {
+  font-size: 1.25rem;
+  min-height: 3.5rem;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  min-height: 4rem;
+  -webkit-line-clamp: 3;
+}
+
+.service-benefits {
+  min-height: 180px;
+}
+
+.service-benefit {
+  font-size: 0.85rem;
+}
+
+/* Spanish language adjustments */
+[lang="es"] .service-card,
+.service-card[data-lang="es"] {
+  min-height: 520px;
+}
+
+[lang="es"] .service-title,
+.service-card[data-lang="es"] .service-title {
+  font-size: 1.15rem;
+  min-height: 4.5rem;
+}
+
+[lang="es"] .service-description,
+.service-card[data-lang="es"] .service-description {
+  font-size: 0.9rem;
+  min-height: 5rem;
+  -webkit-line-clamp: 4;
+}
+
+[lang="es"] .service-benefits,
+.service-card[data-lang="es"] .service-benefits {
+  min-height: 220px;
+}
+
+[lang="es"] .service-benefit,
+.service-card[data-lang="es"] .service-benefit {
+  font-size: 0.82rem;
 }
 
 /* Process Section */
@@ -290,6 +401,7 @@
   font-size: 0.875rem;
 }
 
+/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -314,6 +426,16 @@
   .guarantees-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  /* Tablet adjustments */
+  .service-card {
+    min-height: 540px;
+  }
+
+  [lang="es"] .service-card,
+  .service-card[data-lang="es"] {
+    min-height: 580px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -323,6 +445,16 @@
 
   .process-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Desktop adjustments */
+  .service-card {
+    min-height: 580px;
+  }
+
+  [lang="es"] .service-card,
+  .service-card[data-lang="es"] {
+    min-height: 620px;
   }
 }
 
