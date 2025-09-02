@@ -1,6 +1,9 @@
 import { Github, ExternalLink, Search } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import './PortfolioSection.css';
+import avance from '@/assets/infoBlog/avance.webp';
+import tally from '@/assets/infoBlog/tally.webp';
+
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
@@ -9,7 +12,7 @@ const PortfolioSection = () => {
     {
       title: t('portfolio.projects.ecommerce.title'),
       description: t('portfolio.projects.ecommerce.description'),
-      image: "/images/portfolio/ecommerce.webp",
+      image: avance,
       tags: ["React", ".Net", "MariaDB", "PayPal", "MercadoPago"],
       githubUrl: false,
       liveUrl: "https://avanceytec.com.mx/",
@@ -26,35 +29,35 @@ const PortfolioSection = () => {
     {
       title: t('portfolio.projects.taskManager.title'),
       description: t('portfolio.projects.taskManager.description'),
-      image: "/images/portfolio/task-manager.webp",
+      image: tally,
       tags: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],
       githubUrl: false,
       liveUrl: "https://www.tallylegal.io/"
     },
-    {
-      title: t('portfolio.projects.analytics.title'),
-      description: t('portfolio.projects.analytics.description'),
-      image: "/images/portfolio/analytics.webp",
-      tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
-      githubUrl: "https://github.com/yourusername/analytics-dashboard",
-      liveUrl: "https://analytics-demo.com"
-    },
-    {
-      title: t('portfolio.projects.social.title'),
-      description: t('portfolio.projects.social.description'),
-      image: "/images/portfolio/social-media.webp",
-      tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
-      githubUrl: "https://github.com/yourusername/social-platform",
-      liveUrl: "https://social-demo.com"
-    },
-    {
-      title: t('portfolio.projects.fitness.title'),
-      description: t('portfolio.projects.fitness.description'),
-      image: "/images/portfolio/fitness-app.webp",
-      tags: ["Flutter", "TensorFlow Lite", "Firebase", "Node.js"],
-      githubUrl: "https://github.com/yourusername/fitness-app",
-      liveUrl: "https://fitness-demo.com"
-    }
+    // {
+    //   title: t('portfolio.projects.analytics.title'),
+    //   description: t('portfolio.projects.analytics.description'),
+    //   image: "/images/portfolio/analytics.webp",
+    //   tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
+    //   githubUrl: "https://github.com/yourusername/analytics-dashboard",
+    //   liveUrl: "https://analytics-demo.com"
+    // },
+    // {
+    //   title: t('portfolio.projects.social.title'),
+    //   description: t('portfolio.projects.social.description'),
+    //   image: "/images/portfolio/social-media.webp",
+    //   tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
+    //   githubUrl: "https://github.com/yourusername/social-platform",
+    //   liveUrl: "https://social-demo.com"
+    // },
+    // {
+    //   title: t('portfolio.projects.fitness.title'),
+    //   description: t('portfolio.projects.fitness.description'),
+    //   image: "/images/portfolio/fitness-app.webp",
+    //   tags: ["Flutter", "TensorFlow Lite", "Firebase", "Node.js"],
+    //   githubUrl: "https://github.com/yourusername/fitness-app",
+    //   liveUrl: "https://fitness-demo.com"
+    // }
   ];
 
   return (
