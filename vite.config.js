@@ -13,10 +13,17 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash][extname]'
       }
-    }
+    },
+    assetsInlineLimit: 4096
   },
   server: {
     port: 3000
   },
-  base: './'
+  base: './',
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@assets': '/src/assets'
+    }
+  }
 })
