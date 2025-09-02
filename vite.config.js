@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
@@ -17,18 +16,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
-    strictPort: true
+    port: 3000
   },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
-
-  base: '',
-
-  esbuild: {
-    drop: ['console', 'debugger']
-  }
+  base: './'
 })

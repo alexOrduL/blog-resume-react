@@ -13,24 +13,8 @@
   "routes": [
     {
       "src": "/assets/(.*)",
-      "dest": "/assets/$1",
       "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable",
-        "Content-Type": "application/javascript; charset=utf-8"
-      }
-    },
-    {
-      "src": "/(.*\\.js)",
-      "dest": "/$1",
-      "headers": {
-        "Content-Type": "application/javascript; charset=utf-8"
-      }
-    },
-    {
-      "src": "/(.*\\.css)",
-      "dest": "/$1",
-      "headers": {
-        "Content-Type": "text/css; charset=utf-8"
+        "Cache-Control": "public, max-age=31536000, immutable"
       }
     },
     {
