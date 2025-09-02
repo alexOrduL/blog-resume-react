@@ -20,30 +20,12 @@
         "contact": "Contacto"
     },
     "footer": {
-        "copyright": "© 2024 Todos los derechos reservados",
-        "social": {
-            "title": "Sígueme",
-            "github": "GitHub",
-            "linkedin": "LinkedIn",
-            "twitter": "Twitter"
-        },
-        "links": {
-            "title": "Enlaces rápidos",
-            "home": "Inicio",
-            "about": "Sobre mí",
-            "services": "Servicios",
-            "portfolio": "Portafolio",
-            "blog": "Blog",
-            "contact": "Contacto"
-        },
-        "newsletter": {
-            "title": "Boletín",
-            "description": "Suscríbete para recibir actualizaciones y noticias",
-            "placeholder": "Ingresa tu correo",
-            "submit": "Suscribirse",
-            "success": "¡Gracias por suscribirte!",
-            "error": "Error en la suscripción"
-        }
+        "follow": "Sígueme",
+        "description": "Compartiendo conocimiento sobre desarrollo web, tecnología y reflexiones sobre la industria tech. ¡Conecta conmigo!",
+        "rights": "Todos los derechos reservados.",
+        "builtWith": "Construido con",
+        "by": "por Alejandro Orduño",
+        "and": "y React"
     },
     "language": {
         "changeLanguage": "Cambiar idioma",
@@ -246,8 +228,23 @@
     "testimonials": {
         "sectionBadge": "Testimonios",
         "title": "Lo que dicen mis",
-        "highlight": "clientes",
+        "highlight": "Clientes",
+        "title-end": "dicen de mis servicios",
         "subtitle": "Opiniones de clientes satisfechos que han confiado en mis servicios",
+        "stats": {
+            "satisfaction": {
+                "value": "95%",
+                "label": "Client Satisfaction"
+            },
+            "clients": {
+                "value": "30+",
+                "label": "Projects Delivered On Time"
+            },
+            "projects": {
+                "value": "85%",
+                "label": "Repeat Clients"
+            }
+        },
         "items": [
             {
                 "name": "John Smith",
@@ -260,6 +257,12 @@
                 "role": "Product Manager, E-commerce Co",
                 "text": "Gran comunicación y experiencia técnica. Definitivamente trabajaría con él nuevamente.",
                 "image": "/testimonials/sarah.jpg"
+            },
+            {
+                "name": "John Smith",
+                "role": "CEO, Tech Solutions",
+                "text": "Trabajo excepcional en nuestro proyecto de implementación de IA. Superó las expectativas.",
+                "image": "/testimonials/john.jpg"
             }
         ]
     },
@@ -267,6 +270,11 @@
         "sectionBadge": "Arte & Creatividad",
         "title": "Mi Lado Artístico",
         "subtitle": "Más allá del código, exploro diferentes formas de expresión creativa",
+        "instagram": {
+            "title": "Instagram",
+            "description": "Aquí comparto mi proceso creativo y más contenido",
+            "viewProfile": "Ver perfil"
+        },
         "sections": {
             "hiphop": {
                 "title": "Cultura Hip Hop",
@@ -338,8 +346,13 @@
         "contactInfo": {
             "title": "Información de contacto",
             "email": "Correo:",
-            "phone": "Teléfono:",
+            "emailValue": "aordunol95@gmail.com",
+            "responseTime": "Respuesta en menos de 24 horas",
+            "phoneTitle": "Teléfono:",
+            "phone": "(+52) 614 128 77 21",
+            "shceduleTime": "Lun - Vie, 9AM - 6PM",
             "location": "Ubicación:",
+            "city": "Chihuahua, México",
             "availability": "Disponible para oportunidades freelance"
         }
     },
