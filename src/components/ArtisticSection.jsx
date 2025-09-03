@@ -60,6 +60,7 @@ const ArtisticSection = () => {
       title: t('artistic.sections.music.title'),
       icon: <Music size={32} />,
       description: t('artistic.sections.music.description'),
+      spotifyLink: "https://open.spotify.com/artist/0KTegBzreW7d5zsJrw4fQX",
       images: [
         {
           url: music1,
@@ -104,6 +105,17 @@ const ArtisticSection = () => {
                 </div>
                 <h3 className="artistic-title">{art.title}</h3>
                 <p className="artistic-description">{art.description}</p>
+                {art.spotifyLink && (
+                  <a 
+                    href={art.spotifyLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="spotify-button"
+                  >
+                    <DiscAlbum size={18} />
+                    Spotify
+                  </a>
+                )}
               </div>
 
               <div className="artistic-gallery">

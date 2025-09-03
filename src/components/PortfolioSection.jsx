@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next';
 import './PortfolioSection.css';
 import avance from '@/assets/infoBlog/avance.webp';
 import tally from '@/assets/infoBlog/tally.webp';
+import leanfit from '@/assets/infoBlog/leanfit.webp';
+import movigoo from '@/assets/infoBlog/movigoo.webp';
+import yojma from '@/assets/infoBlog/yojma.webp';
 
 
 const PortfolioSection = () => {
@@ -18,14 +21,14 @@ const PortfolioSection = () => {
       liveUrl: "https://avanceytec.com.mx/",
       featured: true
     },
-    // {
-    //   title: t('portfolio.projects.aiImage.title'),
-    //   description: t('portfolio.projects.aiImage.description'),
-    //   image: "/images/portfolio/ai-image.webp",
-    //   tags: ["Python", "TensorFlow", "React", "FastAPI"],
-    //   githubUrl: "https://github.com/yourusername/ai-image-generator",
-    //   liveUrl: "https://ai-image-gen.demo.com"
-    // },
+    {
+      title: t('portfolio.projects.aiImage.title'),
+      description: t('portfolio.projects.aiImage.description'),
+      image: leanfit,
+      tags: ["Python", "TensorFlow", "React", "FastAPI"],
+      githubUrl: false,
+      liveUrl: "https://leanfit.mx/"
+    },
     {
       title: t('portfolio.projects.taskManager.title'),
       description: t('portfolio.projects.taskManager.description'),
@@ -34,22 +37,22 @@ const PortfolioSection = () => {
       githubUrl: false,
       liveUrl: "https://www.tallylegal.io/"
     },
-    // {
-    //   title: t('portfolio.projects.analytics.title'),
-    //   description: t('portfolio.projects.analytics.description'),
-    //   image: "/images/portfolio/analytics.webp",
-    //   tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
-    //   githubUrl: "https://github.com/yourusername/analytics-dashboard",
-    //   liveUrl: "https://analytics-demo.com"
-    // },
-    // {
-    //   title: t('portfolio.projects.social.title'),
-    //   description: t('portfolio.projects.social.description'),
-    //   image: "/images/portfolio/social-media.webp",
-    //   tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
-    //   githubUrl: "https://github.com/yourusername/social-platform",
-    //   liveUrl: "https://social-demo.com"
-    // },
+    {
+      title: t('portfolio.projects.analytics.title'),
+      description: t('portfolio.projects.analytics.description'),
+      image: movigoo,
+      tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
+      githubUrl: false,
+      liveUrl: "https://movigoo.com/"
+    },
+    {
+      title: t('portfolio.projects.social.title'),
+      description: t('portfolio.projects.social.description'),
+      image: yojma,
+      tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
+      githubUrl: false,
+      liveUrl: "https://yojma.tv"
+    },
     // {
     //   title: t('portfolio.projects.fitness.title'),
     //   description: t('portfolio.projects.fitness.description'),

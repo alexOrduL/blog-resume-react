@@ -51,11 +51,11 @@
                 "label": "Years of experience"
             },
             "projects": {
-                "number": "50+",
+                "number": "10+",
                 "label": "Completed projects"
             },
             "clients": {
-                "number": "30+",
+                "number": "20+",
                 "label": "Satisfied clients"
             }
         }
@@ -197,24 +197,24 @@
         "subtitle": "A selection of my most recent and relevant work",
         "projects": {
             "ecommerce": {
-                "title": "E-commerce Platform",
-                "description": "Modern e-commerce platform with payment processing and inventory management."
+                "title": "E-commerce Platform (B2B/B2C)",
+                "description": "E-commerce platform for the online sale of plastic and acrylic products and materials, and graphic printing equipment, managing an extensive inventory catalog, quotes, orders, and logistics for a national branch network."
             },
             "aiImage": {
-                "title": "AI Image Generator",
-                "description": "Web application that uses AI to generate artistic images from text descriptions."
+                "title": "SaaS Nutrition and Fitness Platform (Software as a Service)",
+                "description": "Comprehensive coaching system that combines a mobile app (iOS/Android) with personalized human monitoring via WhatsApp, for managing macro-based diets, exercise routines, and measuring body progress."
             },
             "taskManager": {
-                "title": "Task Management System",
-                "description": "Business task management system with advanced collaboration features."
+                "title": "Legal Workflow Management System",
+                "description": "Platform for designing, implementing, and managing complex business process automations without code, with advanced task assignment, status tracking, API integrations, and reporting capabilities to optimize productivity."
             },
             "analytics": {
-                "title": "Real-time Analytics Dashboard",
-                "description": "Real-time analytics dashboard for monitoring business metrics."
+                "title": "Artificial Intelligence Platform for Customer Experience (CX)",
+                "description": "Technological solution that uses AI and automation to optimize customer service through intelligent virtual agents, real-time interaction analysis, and omnichannel tools, improving efficiency and reducing operating costs."
             },
             "social": {
-                "title": "Social Media Platform",
-                "description": "Social network with modern features such as real-time chat and multimedia sharing."
+                "title": "SVOD (Subscription Video on Demand) Streaming Platform",
+                "description": "Subscription video on demand service that offers a curated catalog of Spanish-language movies, series, and documentaries, with 100% family-friendly content free of language and inappropriate scenes, available on multiple devices and in HD/4K resolutions."
             },
             "fitness": {
                 "title": "Fitness Tracking App",

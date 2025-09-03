@@ -51,11 +51,11 @@
                 "label": "Años de experiencia"
             },
             "projects": {
-                "number": "50+",
+                "number": "10+",
                 "label": "Proyectos completados"
             },
             "clients": {
-                "number": "30+",
+                "number": "20+",
                 "label": "Clientes satisfechos"
             }
         }
@@ -197,24 +197,24 @@
         "subtitle": "Una selección de mis trabajos más recientes y relevantes",
         "projects": {
             "ecommerce": {
-                "title": "Plataforma E-commerce",
-                "description": "Plataforma de comercio electrónico moderna con procesamiento de pagos y gestión de inventario."
+                "title": "Plataforma de E-commerce (B2B/B2C)",
+                "description": "Plataforma de comercio electrónico para la venta en línea de productos y materiales plásticos, acrílicos y equipos de impresión gráfica, gestionando un catálogo extenso de inventario, cotizaciones, pedidos y logística para una red nacional de sucursales."
             },
             "aiImage": {
-                "title": "Generador de Imágenes IA",
-                "description": "Aplicación web que utiliza IA para generar imágenes artísticas a partir de descripciones textuales."
+                "title": "Plataforma SaaS de Nutrición y Fitness (Software as a Service)",
+                "description": "Sistema integral de coaching que combina una aplicación móvil (iOS/Android) con seguimiento humano personalizado vía WhatsApp, para la gestión de dietas basadas en macros, rutinas de ejercicio y medición de progreso corporal."
             },
             "taskManager": {
-                "title": "Sistema de Gestión de Tareas",
-                "description": "Sistema de gestión de tareas empresariales con características avanzadas de colaboración."
+                "title": "Sistema de Gestión de Flujos de Trabajo Legales",
+                "description": "Plataforma para diseñar, implementar y gestionar automatizaciones de procesos empresariales complejos sin código, con funcionalidades avanzadas de asignación de tareas, seguimiento de estados, integraciones API y generación de informes para optimizar la productividad."
             },
             "analytics": {
-                "title": "Dashboard de Análisis en Tiempo Real",
-                "description": "Dashboard de análisis en tiempo real para monitoreo de métricas empresariales."
+                "title": "Plataforma de Inteligencia Artificial para Customer Experience (CX)",
+                "description": "Solución tecnológica que utiliza IA y automatización para optimizar la atención al cliente a través de agentes virtuales inteligentes, análisis de interacciones en tiempo real y herramientas omnicanal, mejorando la eficiencia y reduciendo costos operativos."
             },
             "social": {
-                "title": "Plataforma de Redes Sociales",
-                "description": "Red social con características modernas como chat en tiempo real y compartir multimedia."
+                "title": "Plataforma de Streaming SVOD (Subscription Video on Demand)",
+                "description": "Servicio de suscripción de video bajo demanda que ofrece un catálogo curando de películas, series y documentales en español, con contenido 100% familiar libre de lenguaje y escenas inapropiadas, disponible en múltiples dispositivos y resoluciones HD/4K."
             },
             "fitness": {
                 "title": "App de Seguimiento Fitness",
