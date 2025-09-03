@@ -1,26 +1,97 @@
-/* CONTENEDOR PRINCIPAL */
+.artistic-section {
+  padding: 6rem 0;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
+}
+
+.instagram-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+}
+
+.instagram-section .section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.instagram-icon {
+  color: var(--color-primary);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.instagram-media {
+  max-width: 540px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* CONTENEDOR PRINCIPAL MEJORADO */
 .artistic-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  align-items: stretch; /* Iguala altura de cards */
+  align-items: stretch;
+  margin-bottom: 4rem;
 }
 
-/* CARDS */
+/* CARDS CON LAYOUT FLEXIBLE */
 .artistic-card {
   flex: 1;
   min-width: 300px;
   max-width: 400px;
   display: flex;
   flex-direction: column;
-  height: auto;
   background: var(--bg-primary);
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
   transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
 }
 
 .artistic-card:hover {
@@ -28,9 +99,9 @@
   box-shadow: var(--shadow-lg);
 }
 
-/* HEADER */
+/* HEADER QUE MANEJA EL ESPACIO FLEXIBLE */
 .artistic-header {
-  flex: 1; /* Ocupa todo el espacio disponible */
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -63,9 +134,9 @@
   margin-bottom: 1rem;
 }
 
-/* BOTÓN SPOTIFY (VERSIÓN MINIMALISTA) */
+/* BOTÓN DE SPOTIFY (VERSIÓN MINIMALISTA) */
 .spotify-button {
-  margin-top: auto; /* Empuja el botón hacia abajo */
+  margin-top: auto;
   margin-bottom: 1rem;
   display: inline-flex;
   align-items: center;
@@ -95,7 +166,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--border-color);
-  flex-shrink: 0; /* Previene que se compriman */
+  flex-shrink: 0;
 }
 
 .gallery-item {
@@ -140,8 +211,80 @@
   margin: 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+.passion-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--bg-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  margin-top: 4rem;
+}
+
+.passion-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.passion-icon {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.passion-content h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.passion-content p {
+  color: var(--text-color-secondary);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.passion-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-icon {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-color-secondary);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 639px) {
   .artistic-grid {
     flex-direction: column;
   }
@@ -151,8 +294,38 @@
     max-width: 100%;
   }
   
+  .passion-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section-header {
+    padding: 0 1rem;
+  }
+  
+  .passion-section {
+    padding: 2rem 1rem;
+  }
+  
   .spotify-button {
     padding: 0.5rem 1.2rem;
     font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .artistic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .artistic-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
   }
 }
