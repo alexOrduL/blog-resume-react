@@ -25,7 +25,7 @@ const PortfolioSection = () => {
       title: t('portfolio.projects.aiImage.title'),
       description: t('portfolio.projects.aiImage.description'),
       image: leanfit,
-      tags: ["Python", "TensorFlow", "React", "FastAPI"],
+      tags: ["Laravel", "Flutter", "PostgreSql", "FastAPI"],
       githubUrl: false,
       liveUrl: "https://leanfit.mx/"
     },
@@ -33,7 +33,7 @@ const PortfolioSection = () => {
       title: t('portfolio.projects.taskManager.title'),
       description: t('portfolio.projects.taskManager.description'),
       image: tally,
-      tags: ["TypeScript", "Next.js", "PostgreSQL", "Docker"],
+      tags: ["Laravel", "Vue.js", "PostgreSQL", "Docker", "Cypress"],
       githubUrl: false,
       liveUrl: "https://www.tallylegal.io/"
     },
@@ -41,7 +41,7 @@ const PortfolioSection = () => {
       title: t('portfolio.projects.analytics.title'),
       description: t('portfolio.projects.analytics.description'),
       image: movigoo,
-      tags: ["Vue.js", "D3.js", "WebSocket", "Express"],
+      tags: ["Laravel", "NodeJs", "MetaApis", "Five9", "Python"],
       githubUrl: false,
       liveUrl: "https://movigoo.com/"
     },
@@ -49,7 +49,7 @@ const PortfolioSection = () => {
       title: t('portfolio.projects.social.title'),
       description: t('portfolio.projects.social.description'),
       image: yojma,
-      tags: ["React Native", "Firebase", "GraphQL", "Node.js"],
+      tags: ["Ruby", "Rails"],
       githubUrl: false,
       liveUrl: "https://yojma.tv"
     },
